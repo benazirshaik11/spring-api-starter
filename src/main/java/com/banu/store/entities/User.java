@@ -1,5 +1,7 @@
-package com.codewithmosh.store.entities;
+package com.banu.store.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,12 +23,14 @@ public class User {
     @Column(name = "id")
     private Long id;
 
+    @JsonProperty("user_name") //to rename a field
     @Column(name = "name")
     private String name;
 
     @Column(name = "email")
     private String email;
 
+    @JsonIgnore //ignore the field in output
     @Column(name = "password")
     private String password;
 
