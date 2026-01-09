@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SONAR_TOKEN = credentials('sonarcloud-token')
+        SONAR_TOKEN = credentials('sonarcloud-token1')
     }
 
     stages {
@@ -13,6 +13,8 @@ pipeline {
             }
         }
 
+
+
         stage('Build & SonarCloud Analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
@@ -20,6 +22,8 @@ pipeline {
                     mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=benazirshaik11_spring-api-starter\
                     -Dsonar.organization=benazirshaik11
+                    -Dsonar.host.url=https://sonarcloud.io \
+                    -Dsonar.login=$SONAR_TOKEN
                     """
                 }
             }
@@ -33,4 +37,12 @@ pipeline {
             }
         }
     }
+     post {
+            success {
+                echo 'Build and SonarCloud analysis completed successfully'
+            }
+            failure {
+                echo 'Build or SonarCloud analysis failed'
+            }
+        }
 }
