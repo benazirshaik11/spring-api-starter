@@ -17,7 +17,6 @@ pipeline {
 
         stage('Build & SonarCloud Analysis') {
             steps {
-                withSonarQubeEnv('SonarCloud') {
                     sh """
                     mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=benazirshaik11_spring-api-starter\
@@ -25,7 +24,7 @@ pipeline {
                     -Dsonar.host.url=https://sonarcloud.io \
                     -Dsonar.login=$SONAR_TOKEN
                     """
-                }
+
             }
         }
 
