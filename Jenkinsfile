@@ -21,7 +21,7 @@ pipeline {
                 withSonarQubeEnv('SonarCloud') {
                     bat """
                     mvn clean verify sonar:sonar ^
-                    -Dsonar.projectKey=benazirshaik11_spring-api-starter^
+                    -Dsonar.projectKey=benazirshaik11_spring-api-starter ^
                     -Dsonar.organization=benazirshaik11
                     """
                 }
