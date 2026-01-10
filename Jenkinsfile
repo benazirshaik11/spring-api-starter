@@ -1,8 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'JDK17'
-        maven 'Maven3'
+        jdk 'JAVA_HOME'
     }
     environment {
         SONAR_TOKEN = credentials('sonarcloud-token1')
