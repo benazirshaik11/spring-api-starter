@@ -16,12 +16,10 @@ pipeline {
             }
         }
 
-
-
         stage('Build & SonarCloud Analysis') {
             steps {
                     bat """
-                    mvn  sonar:sonar ^
+                    mvn clean verify sonar:sonar ^
                     -Dsonar.projectKey=benazirshaik11_spring-api-starter^
                     -Dsonar.organization=benazirshaik11^
                     -Dsonar.host.url=https://sonarcloud.io ^
