@@ -4,7 +4,7 @@ pipeline {
         jdk 'JAVA_HOME'
     }
     environment {
-        SONAR_TOKEN = credentials('sonarcloud-token1')
+        SONAR_TOKEN = credentials('Sonar cloud token')
     }
 
     stages {
