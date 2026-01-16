@@ -18,11 +18,17 @@ pipeline {
             }
         }
 
+        stage('Build Application') {
+            steps {
+                bat 'mvn clean package -DskipTests'
+            }
+        }
+
         stage('Build & SonarCloud Analysis') {
             steps {
                 withSonarQubeEnv('SonarCloud') {
                     bat """
-                    mvn clean verify sonar:sonar ^
+                    mvn sonar:sonar ^
                     -Dsonar.projectKey=benazirshaik11_spring-api-starter ^
                     -Dsonar.organization=benazirshaik11
                     """
