@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.banu</groupId>
     <artifactId>store</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>store</name>
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+<!--    <name>store</name>-->
     <description>store</description>
     <url/>
     <licenses>
@@ -83,6 +83,7 @@
     </dependencies>
 
     <build>
+        <finalName>store-app</finalName>
         <plugins>
             <plugin>
                 <groupId>org.flywaydb</groupId>

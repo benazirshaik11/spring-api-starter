@@ -3,6 +3,8 @@ spring:
     name: store
   datasource:
     url: jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true
+    #    url: jdbc:mysql://mysql:3306/store_api?createDatabaseIfNotExist=true
+    #    used when we want to mysql inside docker
     username: root
     password: BanuDawood@3006
   jpa:
