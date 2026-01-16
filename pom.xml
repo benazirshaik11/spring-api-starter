@@ -10,8 +10,6 @@
     </parent>
     <groupId>com.banu</groupId>
     <artifactId>store</artifactId>
-<!--    <version>0.0.1-SNAPSHOT</version>-->
-<!--    <name>store</name>-->
     <description>store</description>
     <url/>
     <licenses>
