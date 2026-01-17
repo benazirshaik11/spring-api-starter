@@ -11,3 +11,7 @@ spring:
     show-sql: true
 server:
   port: 8081
+sonar:
+  coverage:
+    jacoco:
+      xmlReportPaths: target/site/jacoco/jacoco.xml
