@@ -38,8 +38,6 @@ public class User {
     @Builder.Default
     private List<Address> addresses = new ArrayList<>();
 
-    public User(long l, String abc, String mail) {
-    }
 
     public void addAddress(Address address) {
         addresses.add(address);

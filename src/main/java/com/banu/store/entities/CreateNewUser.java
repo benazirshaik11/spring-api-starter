@@ -14,11 +14,4 @@ public class CreateNewUser {
     private String name;
     private String email;
     private String password;
-
-    public CreateNewUser(String aNew, String mail) {
-    }
-
-    public CreateNewUser() {
-
-    }
 }

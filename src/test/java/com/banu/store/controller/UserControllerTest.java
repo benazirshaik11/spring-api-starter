@@ -126,7 +126,9 @@ public class UserControllerTest {
 
         Long userId = 99L;
 
-        CreateNewUser request = new CreateNewUser("test","test@gmail.com");
+        CreateNewUser request = new CreateNewUser();
+        request.setName("test");
+        request.setEmail("test@gmail.com");
 
         when(userRepository.findById(userId)).thenReturn(Optional.empty());
 
@@ -139,7 +141,10 @@ public class UserControllerTest {
     // ---------- DELETE /users/{id} ----------
     @Test
     void shouldDeleteUser() throws Exception {
-        User user = new User(1L, "abc", "abc@test.com");
+        User user = new User();
+        user.setId(1L);
+        user.setName("abc");
+        user.setEmail("abc@test.com");
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
 
         mockMvc.perform(delete("/users/1"))
