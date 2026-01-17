@@ -21,8 +21,10 @@ public class UserController {
 
     @GetMapping("/users")
     public Iterable<User> getAllUsers(
-            @RequestHeader( name="authToken") String authToken) //this makes compulsory to provide authToken value in Headers tab
-            // to make this optional @RequestHeader(required = false,name="authToken") String authToken
+            //@RequestHeader(name="authToken") String authToken
+            //this makes compulsory to provide authToken value in Headers tab
+            @RequestHeader( required = false,name="authToken") String authToken) // to make this optional
+
     {
         System.out.println(authToken);
         return userRepository.findAll();

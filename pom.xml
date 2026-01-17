@@ -71,11 +71,7 @@
             <groupId>org.mapstruct</groupId>
             <version>1.6.3</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.banu</groupId>-->
-<!--            <artifactId>store</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+
 
 
     </dependencies>
