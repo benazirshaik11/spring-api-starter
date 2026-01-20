@@ -57,15 +57,14 @@ Using this project for learning and hands-on
 
 ## Docker Setup
 
-   `Build Docker Image`: docker build -t store-app .
+   `Build Docker Image`: `docker build -t store-app .`
     
    `Run Using Docker Compose`: docker-compose up -d
     
    `Stop Containers` : docker-compose down
-
+   
 ## Testing Strategy
 
-    `Unit Tests`: Written using JUnit and Mockito to validate business logic and controller behavior.
-    
-    `Code Coverage`: Enforced via SonarQube quality gates to maintain high test standards.
+   `Unit Tests`: Written using JUnit and Mockito to validate business logic and controller behavior.
+   `Code Coverage`: Enforced via SonarQube quality gates to maintain high test standards.
     
